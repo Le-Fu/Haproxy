@@ -2,25 +2,17 @@
   "name": "haproxy",
   "description": "Api proxy",
   "version": "1.0.0",
-  "manifest_version": 2,
-  "browser_action": {
+  "manifest_version": 3,
+  "action": {
     "default_popup": "popup.html",
-    "default_title": "Haproxy",
-    "default_icon": "assets/icon.png"
+    "default_icon": "/assets/icon.png"
+  },
+  "icons": {
+    "64": "/assets/icon.png"
   },
   "options_page": "options.html",
-  "commands": {
-    "_execute_browser_action": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+P",
-        "mac": "MacCtrl+Shift+P"
-      },
-      "description": "Open popup.html"
-    }
-  },
-  "permissions": ["storage", "declarativeContent", "activeTab"],
+  "permissions": ["storage", "activeTab", "scripting", "contextMenus", "webRequest", "webRequestBlocking"],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": true
+    "service_worker": "background.js"
   }
 }

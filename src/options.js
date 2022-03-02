@@ -1,15 +1,13 @@
-let page = document.getElementById("buttonDiv");
-const kButtonColors = ["#3aa757", "#e8453c", "#f9bb2d", "#4688f1", "#1100ff"];
-function constructOptions(kButtonColors) {
-    for (let item of kButtonColors) {
-        let button = document.createElement("button");
-        button.style.backgroundColor = item;
-        button.addEventListener("click", function () {
-            chrome.storage.sync.set({ color: item }, function () {
-                console.log("color is " + item);
-            });
-        });
-        page.appendChild(button);
-    }
+import React from 'react'
+import ReactDOM from 'react-dom'
+import FormPage from './components/form'
+import 'antd/dist/antd.css'
+
+function App() {
+    return (
+        <div>options</div>
+    )
 }
-constructOptions(kButtonColors);
+
+ReactDOM.render(<App />, document.getElementById('root'))
+

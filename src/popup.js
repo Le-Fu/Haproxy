@@ -20,9 +20,13 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
+import FormPage from './components/form'
+import 'antd/dist/antd.css'
 
 function App() {
-    return <div>APP</div>
+    return (
+        <FormPage />
+    )
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
