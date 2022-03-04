@@ -8,7 +8,8 @@ module.exports = {
     devtool: 'inline-source-map',
     entry: {
         popup: './src/popup.js',
-        options: './src/options.js'
+        options: './src/options.js',
+        background: './src/background.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -38,11 +39,11 @@ module.exports = {
             {
                 test: /\.less$/,
                 use: [{
-                    loader: "style-loader" // creates style nodes from JS strings
+                    loader: "style-loader"
                 }, {
-                    loader: "css-loader" // translates CSS into CommonJS
+                    loader: "css-loader"
                 }, {
-                    loader: "less-loader",  // compiles Less to CSS
+                    loader: "less-loader",
                 }]
             }
         ]
@@ -62,7 +63,7 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 { from: './src/*.json', to: '[name][ext]' },
-                { from: './src/background.js', to: '[name][ext]' },
+                // { from: './src/background.js', to: '[name][ext]' },
                 { from: './src/assets/*.png', to: 'assets/[name][ext]' }
             ]
         })
