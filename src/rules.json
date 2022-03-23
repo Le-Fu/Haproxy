@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "condition": { "regexFilter": "(.*)(/dealerloanadmin/proxyholder/detail)(.*)" },
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://hapi.58corp.com/mock/60e6a7bb977b160387572dac"
+      }
+    }
+  }
+]

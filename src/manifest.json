@@ -5,7 +5,8 @@
   "manifest_version": 3,
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "/assets/icon.png"
+    "default_icon": "/assets/icon.png",
+    "default_title": "OFF"
   },
   "icons": {
     "64": "/assets/icon.png"
@@ -18,7 +19,7 @@
       {
         "id": "ruleset_1",
         "enabled": true,
-        "path": "rule.json"
+        "path": "rules.json"
       }
     ]
   },

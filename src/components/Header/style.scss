@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #357;
+  &__left {
+    flex: 1;
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    width: 70px;
+  }
+}
