@@ -12,13 +12,22 @@
     "64": "/assets/icon.png"
   },
   "options_page": "options.html",
-  "permissions": ["storage", "activeTab", "scripting", "declarativeNetRequest", "declarativeNetRequestFeedback"],
-  "host_permissions": ["*://*/*"],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "contextMenus",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
   "declarative_net_request": {
     "rule_resources": [
       {
         "id": "ruleset_1",
-        "enabled": true,
+        "enabled": false,
         "path": "rules.json"
       }
     ]

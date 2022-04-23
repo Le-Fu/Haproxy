@@ -9,9 +9,11 @@
           "chrome": "67",
           "safari": "11.1"
         },
-        "useBuiltIns": "usage"
+        "useBuiltIns": "usage",
+        "modules": false
       }
     ],
     "@babel/preset-react"
-  ]
+  ],
+  "plugins": [["@babel/transform-runtime"]]
 }

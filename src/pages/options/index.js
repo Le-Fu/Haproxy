@@ -1,8 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Main from './components/main'
 import 'antd/dist/antd.css'
-import './global.scss'
+import Main from './components/Main'
 
 function App() {
     return (
