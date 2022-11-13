@@ -7,8 +7,8 @@ class BaseModel {
     }
 
     async setData(dataKey, data) {
-        console.log(dataKey, data);
         await store.set({ [dataKey]: data })
+        console.log(`set ${dataKey} data:`, data);
     }
 }
 

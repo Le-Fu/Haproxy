@@ -22,10 +22,14 @@ function ProjectList() {
     });
   };
 
+  const handleDelete = async (projectId) => {
+    dispatch({ type: "DELETE_PROJECT", payload: projectId });
+  };
+
   return (
     <div className="project-list">
       <AddProject onAdd={handleAddProject} />
-      <List selectedProject={selectedProject} list={list} onChange={handleSelectProject} />
+      <List selectedProject={selectedProject} list={list} onChange={handleSelectProject} onDelete={handleDelete} />
     </div>
   );
 }

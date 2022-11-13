@@ -20,11 +20,9 @@ export const useSelector = (selector = null) => {
     }
 
     chrome.storage.onChanged.addListener((changes, areaName) => {
-        console.log(selector, 'change', changes);
         if (areaName === 'local') {
             const { newValue, oldValue } = changes[selector] || {}
             if (isDifferentInDeep(newValue, oldValue)) {
-                console.log('different');
                 setState(newValue)
             }
         }

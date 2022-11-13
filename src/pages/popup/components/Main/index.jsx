@@ -11,7 +11,7 @@ function Main() {
     <Layout style={{ minHeight: 500, minWidth: 700, width: "100%", height: "100vh" }}>
       <Header style={{ height: "10vh" }} />
       <Layout style={{ height: "90vh", overflow: "hidden" }}>
-        <Sider width={150} theme="light">
+        <Sider width={200} theme="light">
           <ProjectList />
         </Sider>
         <Content>

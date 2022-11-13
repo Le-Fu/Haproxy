@@ -35,14 +35,12 @@ function extractApiInfo() {
         desc: '',
         mockId: '',
         from: '',
-        to: ''
     }
 
     if (nodeList.length >= 6) {
         copyInfo.desc = (nodeList[0].children[1].innerText).trim();
         copyInfo.mockId = (nodeList[1].children[0].children[1].innerText).trim();
-        copyInfo.from = `(.*)(${(nodeList[5].children[1].children[1].innerText).trim()})(.*)`;
-        copyInfo.to = `https://hapi.58corp.com/mock/${copyInfo.mockId}`;
+        copyInfo.from = `${(nodeList[5].children[1].children[1].innerText).trim()}`;
     }
 
     chrome.runtime.sendMessage({

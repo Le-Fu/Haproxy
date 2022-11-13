@@ -35,6 +35,7 @@ export const useSelector = (selector = null) => {
 
 export const useDispatch = () => {
     return (action) => new Promise((resolve, reject) => {
+        console.log('dispatch', action);
         chrome.runtime.sendMessage(action, (res) => {
             if (chrome.runtime.lastError) {
                 return reject(chrome.runtime.lastError);
